@@ -1,0 +1,66 @@
+$image : url(../img/img1.jpg);
+$image2 : url(../img/img2.jpg);
+$image3 : url(../img/img3.jpg);
+$image4 : url(../img/img4.jpg);
+$image5 : url(../img/img5.jpg);
+
+@mixin container{
+    width: 100%;
+    padding: 20px;
+}
+
+@mixin size__image{
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin: 0px 0px 10px 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+@mixin text{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    transition: 0.4s, visibility 0.1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3em;
+    transform: translateY(100%);
+    visibility: hidden;
+}
+
+@mixin hover_text{
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@mixin text2{
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    clip-path: circle(10% at center);
+    top: 0;
+    overflow: hidden;
+    color: #fff;
+    padding: 3em;
+    width: 100%;
+    height: 100%;
+    transition: 0.7s, visibility 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+@mixin hover_text2{
+    clip-path: circle(100%);
+    opacity: 1;
+}

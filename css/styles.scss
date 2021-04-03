@@ -1,0 +1,122 @@
+@import 'images';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    @include container;
+}
+
+.imagen{
+    @include size__image;
+}
+
+/*imagen1*/
+.image__1{
+    background-image: $image;
+}
+
+.image__1:hover .text{
+    @include hover_text;
+}
+/*imagen2*/
+.image__2{
+    background-image: $image2;
+}
+.image__2:hover .text__2{
+    @include hover_text;
+}
+
+/*imagen3*/
+.image__3{
+    background-image: $image3;
+}
+.image__3:hover .text__3{
+    @include hover_text;
+}   
+
+/*imagen4*/
+.image__4{
+    background-image: $image4;
+}
+.image__4:hover .text__4{
+    @include hover_text2;
+}
+
+/*imagen5*/
+.image__5{
+    background-image: $image5;
+}
+.image__5:hover .text__5{
+    @include hover_text2;
+}
+
+/*capa*/
+.text{
+    @include text;
+}
+.text__2{
+    @include text;
+}
+.text__3{
+    @include text;
+}
+.text__4{
+    @include text2;
+}
+.text__5{
+    @include text2;
+}
+
+
+
+
+@media screen and (min-width: 500px) {
+    .imagen{
+       height: 300px; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        padding: 60px;
+    }
+
+    .imagen{
+        width: 90%;
+        height: 400px; 
+        margin: auto;
+    }
+    .txt h2{
+        font-size: 3em;
+    }
+    .txt p{
+        margin-top: 5px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container .flex{
+        display: flex;
+    }
+
+    .imagen{
+       width: 80%;
+       height: 350px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container .flex{
+        
+    }
+
+    .imagen{
+       width: 80%;
+       height: 400px;
+    }
+}
